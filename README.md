@@ -1,0 +1,2 @@
+# DjangoGramm
+my educational project
