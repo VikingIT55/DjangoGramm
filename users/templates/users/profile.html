@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+         <img
+            class="banner"
+            src="{{ profile.avatar.url }}"
+        />
+        <h1>{{ profile.first_name }}</h1>
+        <h2>{{ profile.last_name }}</h2>
+        <h3>{{ profile.bio }}</h3>
+{% endblock content %}

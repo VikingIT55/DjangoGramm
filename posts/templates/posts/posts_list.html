@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block title %}
+{{ post.title }}
+{% endblock title %}
+{% block content %}
+<section>
+    {% for post in posts %}
+    <article class="post">
+         <img
+            class="banner"
+            src="{{ post.images.url }}"
+            alt="{{ post.title }}"
+        />
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.tags }}</h2>
+        <h3>{{ post.date }} by <a href="{% url 'users:profile' username=post.author.username %}">
+                {{post.author }}
+            </a>
+        </h3>
+    </article>
+     {% endfor %}
+    </section>
+{% endblock content %}
